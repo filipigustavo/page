@@ -39,7 +39,7 @@ function App() {
           Limpar
         </button>
       </form>
-      {!!showName && <p>Olá, {formik.values.name}</p>}
+      <p style={!!showName ? { border: "1px solid green" } : { border: "1px solid white" }}>Olá, {!!showName ? formik.values.name : "Estranho"}</p>
     </div>
   );
 }
