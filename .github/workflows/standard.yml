@@ -25,6 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: Set Github user
+        run: |
+          git config --global user.email "email@filipigustavo.com.br"
+          git config --global user.name "Filipi Gustavo"
+
       - name: Install dependencies
         # Using npm ci is generally faster than running npm i because it caches dependencies
         run: |
